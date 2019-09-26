@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="alarmBinding"
+            type="com.uma.workmanagerdemo.ui.setalarm.AlarmViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.setalarm.AlarmActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="60dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="60dp" />
+
+        <Button
+            android:id="@+id/btnCancelByTag"
+            style="@style/btnStyle"
+            android:layout_marginTop="100dp"
+            android:onClick="@{()->alarmBinding.cancelWorkBytag()}"
+            android:text="@string/cancelByTag"
+            app:layout_constraintLeft_toLeftOf="@id/glBegin"
+            app:layout_constraintRight_toRightOf="@id/glEnd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnEnque"
+            style="@style/btnStyle"
+            android:onClick="@{()->alarmBinding.queuingWork()}"
+            android:text="@string/queuingRequest"
+            app:layout_constraintLeft_toLeftOf="@id/glBegin"
+            app:layout_constraintRight_toRightOf="@id/glEnd"
+            app:layout_constraintTop_toBottomOf="@id/btnCancelByTag" />
+
+        <Button
+            android:id="@+id/btnSetAlarm"
+            style="@style/btnStyle"
+            android:onClick="@{()->alarmBinding.oneTimeRequest()}"
+            android:text="@string/onetimeRequest"
+            app:layout_constraintLeft_toLeftOf="@id/glBegin"
+            app:layout_constraintRight_toRightOf="@id/glEnd"
+            app:layout_constraintTop_toBottomOf="@id/btnEnque" />
+
+        <Button
+            android:id="@+id/btnCancelAlarm"
+            style="@style/btnStyle"
+            android:onClick="@{()->alarmBinding.cancelPeriodicalRequest()}"
+            android:text="@string/cancelPeriodicalRequest"
+            app:layout_constraintLeft_toLeftOf="@id/glBegin"
+            app:layout_constraintRight_toRightOf="@id/glEnd"
+            app:layout_constraintTop_toBottomOf="@id/btnSetAlarm" />
+
+        <Button
+            android:id="@+id/btnPeriodical"
+            style="@style/btnStyle"
+            android:onClick="@{()->alarmBinding.periodicalRequest()}"
+            android:text="@string/PeriodicalRequest"
+            app:layout_constraintLeft_toLeftOf="@id/glBegin"
+            app:layout_constraintRight_toRightOf="@id/glEnd"
+            app:layout_constraintTop_toBottomOf="@id/btnCancelAlarm" />
+
+        <Button
+            android:id="@+id/btnQueueWithList"
+            style="@style/btnStyle"
+            android:onClick="@{()->alarmBinding.queuingWorkWithList()}"
+            android:text="@string/queueWithList"
+            app:layout_constraintLeft_toLeftOf="@id/glBegin"
+            app:layout_constraintRight_toRightOf="@id/glEnd"
+            app:layout_constraintTop_toBottomOf="@id/btnPeriodical" />
+
+        <Button
+            android:id="@+id/btnWorkChain"
+            style="@style/btnStyle"
+            android:onClick="@{()->alarmBinding.workWithChain()}"
+            android:text="@string/workChain"
+            app:layout_constraintLeft_toLeftOf="@id/glBegin"
+            app:layout_constraintRight_toRightOf="@id/glEnd"
+            app:layout_constraintTop_toBottomOf="@id/btnQueueWithList" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

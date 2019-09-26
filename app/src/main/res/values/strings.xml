@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WorkManagerDemo</string>
+
+    <!--Strings-->
+    <string name="onetimeRequest">One Time Request</string>
+    <string name="PeriodicalRequest">Periodical Request</string>
+    <string name="cancelPeriodicalRequest">Cancel Periodical Request</string>
+    <string name="queuingRequest">Queue Request</string>
+    <string name="queueWithList">Queue with List</string>
+    <string name="cancelByTag">Cancel by Tag</string>
+    <string name="workChain">Work Chain</string>
+</resources>

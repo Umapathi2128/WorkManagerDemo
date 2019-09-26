@@ -1,0 +1,4 @@
+#Wed Sep 25 12:21:41 IST 2019
+base.0=/uma/AndroidWorkSpace/WorkManagerDemo/benchmark/build/intermediates/dex/debugAndroidTest/mergeDexDebugAndroidTest/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
